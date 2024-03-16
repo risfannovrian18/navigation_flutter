@@ -30,3 +30,24 @@ class HalSatu extends StatelessWidget {
     );
   }
 }
+
+class HalDua extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text("Profil"),
+      ),
+      body: new Center(
+        child: new IconButton(
+          icon: new Icon(
+            Icons.account_circle,
+            size: 80.0,
+            color: Colors.black,
+          ),
+          onPressed: null,
+        ),
+      ),
+    );
+  }
+}
