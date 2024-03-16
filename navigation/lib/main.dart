@@ -11,6 +11,22 @@ void main() {
 class HalSatu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Scaffold();
+    return new Scaffold(
+      // Judul
+      appBar: new AppBar(
+        title: new Text("Beranda"),
+      ),
+      // icon button
+      body: new Center(
+        child: new IconButton(
+          icon: new Icon(
+            Icons.android,
+            size: 80.0,
+            color: Colors.green,
+          ),
+          onPressed: null,
+        ),
+      ),
+    );
   }
 }
