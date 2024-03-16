@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(new MaterialApp(
-    // ini yang pertama kali di run
-    home: new HalSatu(),
-    title: "Navigasi",
-  ));
+      // ini yang pertama kali di run
+      home: new HalSatu(),
+      title: "Navigasi",
+      // Routing
+      routes: <String, WidgetBuilder>{
+        '/HalDua': (BuildContext context) => new HalDua(),
+      }));
 }
 
 class HalSatu extends StatelessWidget {
@@ -45,7 +48,10 @@ class HalDua extends StatelessWidget {
             size: 80.0,
             color: Colors.black,
           ),
-          onPressed: null,
+          //Navigation
+          onPressed: () {
+            Navigator.pushNamed(context, '/HalDua');
+          },
         ),
       ),
     );
